@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.gallery-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  z-index: -1;
+  pointer-events: none;
+  gap: 0;
+}
+
+.image-row {
+  flex: 1;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: visible;
+  position: relative;
+  line-height: 0;
+  margin: 0;
+}
+
+.image-row:nth-child(even) {
+  margin-top: -2px;
+}
+
+.image-row::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.671);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #F2D2A9 85.1%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.gallery-image {
+  max-width: 300px;
+  max-height: 456px;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  flex-shrink: 0;
+  display: block;
+  vertical-align: bottom;
+}
