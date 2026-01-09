@@ -6,7 +6,7 @@
 }
 
 .navbar {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -126,7 +126,7 @@
   padding: 2px 22px;
   border-radius: 8px;
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 60px;
   position: relative;
   overflow: visible;
   color: transparent;
@@ -170,7 +170,9 @@
 .navbar-button:focus .navbar-button-text,
 .navbar-button:active .navbar-button-text {
   background: #6FAF74;
-  -webkit-text-fill-color: #6FAF74;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .button-decoration {

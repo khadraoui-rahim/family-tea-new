@@ -1,0 +1,131 @@
+.who-we-are-section {
+  width: 100vw;
+  height: 100vh;
+  background-color: #F2D2A9;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.who-we-are-content {
+  max-width: 1800px;
+}
+
+.who-we-are-title {
+  font-family: 'Abdomisr', sans-serif;
+  font-size: 84px;
+  background: linear-gradient(90deg, #5B1A1A 0%, #FF8D28 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 0;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  height: calc(100vh - 250px);
+  max-height: 600px;
+  margin-top: 40px;
+  width: 1000px;
+}
+
+.grid-item {
+  border-radius: 20px;
+}
+
+.grid-item-brown {
+  background-color: #6B5555;
+  grid-row: 1 / 3;
+}
+
+.grid-item-red {
+  background-color: #C85C5C;
+}
+
+.grid-item-green {
+  background-color: #6FAF74;
+}
+
+.grid-item-white {
+  background-color: #FFFFFF;
+  grid-column: 2 / 4;
+}
+
+.grid-item {
+  position: relative;
+}
+
+.grid-item-image {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  max-width: 120px;
+  height: auto;
+  object-fit: contain;
+  z-index: 1;
+}
+
+.grid-item-content {
+  padding: 30px;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.grid-item-title {
+  font-family: 'Abdomisr', sans-serif;
+  font-size: 26px;
+  margin:  0;
+  font-weight: bold;
+}
+
+.grid-item-list {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.grid-item-list li {
+  font-family: 'Abdomisr', sans-serif;
+  font-size: 20px;
+  margin-bottom: 15px;
+  line-height: .8;
+}
+
+.grid-item-text {
+  font-family: 'Abdomisr', sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  margin: 0;
+}
+.special{
+  line-height: 1.2;
+}
+
+.grid-item-content-white {
+  color: #5B1A1A;
+}
+
+.grid-item-title-white {
+  color: #5B1A1A;
+}
+
+.grid-item-text-white {
+  color: #5B1A1A;
+  width: 500px;
+}
+
+.grid-item-list-white {
+  color: #5B1A1A;
+}
+.grid-item-list-white li{
+margin-bottom: 5px;
+}
+.special2{
+  margin-top: 5px;
+}
