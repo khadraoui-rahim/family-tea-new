@@ -12,7 +12,7 @@ function Navbar() {
   const subtitleRef = useRef(null);
   const descriptionRef = useRef(null);
   const buttonRef = useRef(null);
-
+// fuck this bs
   useEffect(() => {
     const timeline = gsap.timeline();
 
