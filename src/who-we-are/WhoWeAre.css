@@ -129,3 +129,15 @@ margin-bottom: 5px;
 .special2{
   margin-top: 5px;
 }
+.lh{
+      line-height: 31px;
+}
+
+.fade-in-text {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.fade-in-text.fade-in-visible {
+  opacity: 1;
+}

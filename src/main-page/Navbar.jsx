@@ -19,44 +19,44 @@ function Navbar() {
     // Sand animation
     timeline.fromTo(sandRef.current, 
       { y: -100, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, ease: "power2.out" }
+      { y: 0, opacity: 1, duration: 0.4, ease: "power2.out" }
     );
 
     // Nav elements
     timeline.fromTo(navListRef.current,
       { opacity: 0, y: -20 },
-      { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" },
-      "-=0.3"
+      { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" },
+      "-=0.2"
     );
 
     // Logo
     timeline.fromTo(logoRef.current,
       { opacity: 0, y: -20 },
-      { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }
+      { opacity: 1, y: 0, duration: 0.25, ease: "power2.out" }
     );
 
     // Title
     timeline.fromTo(titleRef.current,
       { opacity: 0, y: -20 },
-      { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }
+      { opacity: 1, y: 0, duration: 0.25, ease: "power2.out" }
     );
 
     // Subtitle
     timeline.fromTo(subtitleRef.current,
       { opacity: 0, y: -20 },
-      { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }
+      { opacity: 1, y: 0, duration: 0.25, ease: "power2.out" }
     );
 
     // Description
     timeline.fromTo(descriptionRef.current,
       { opacity: 0, y: -20 },
-      { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }
+      { opacity: 1, y: 0, duration: 0.25, ease: "power2.out" }
     );
 
     // Button
     timeline.fromTo(buttonRef.current,
       { opacity: 0, y: -20 },
-      { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }
+      { opacity: 1, y: 0, duration: 0.25, ease: "power2.out" }
     );
 
     // Button decoration animation (starts after everything is visible)
