@@ -4,6 +4,8 @@ import BackImages from './main-page/BackImages'
 import Navbar from './main-page/Navbar'
 import WhoWeAre from './who-we-are/WhoWeAre'
 import TheExperience from './the-experience/TheExperience'
+import TrustedByMany from './trusted-by-many/TrustedByMany'
+import Footer from './footer/Footer'
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       </section>
       <WhoWeAre />
       <TheExperience />
+      <TrustedByMany />
+      <Footer />
     </div>
   )
 }

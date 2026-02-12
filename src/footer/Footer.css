@@ -1,0 +1,80 @@
+.footer {
+    width: 100%;
+    background-color: #F2D2A9;
+    padding: 0 40px 40px 40px;
+}
+
+.footer-divider {
+    border: none;
+    height: 3px;
+    background: linear-gradient(90deg, #5B1A1A 0%, #FF8D28 100%);
+    margin: 0 0 40px 0;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.footer-logo {
+    flex-shrink: 0;
+}
+
+.footer-logo img {
+    width: 140px;
+    height: auto;
+}
+
+.footer-nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: -2px 20px;
+    flex: 1;
+    max-width: 400px;
+}
+
+.footer-nav a {
+    font-family: 'Abdomisr', sans-serif;
+    font-size: 28px;
+    background: linear-gradient(90deg, #5B1A1A 0%, #673C16 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-decoration: none;
+    transition: opacity 0.3s;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.footer-nav a:hover {
+    opacity: 0.7;
+}
+
+.footer-instagram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-instagram svg {
+    width: 32px;
+    height: 32px;
+}
+
+.footer-location {
+    flex-shrink: 0;
+}
+
+.location-map {
+    width: 490px;
+    height: 200px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}

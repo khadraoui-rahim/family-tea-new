@@ -15,9 +15,9 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin: 0;
   text-align: center;
-      height: 110px;
-      position: relative;
-      top: -20px;
+  height: 110px;
+  position: relative;
+  top: -20px;
 }
 
 .experience-subheader {
@@ -29,10 +29,10 @@
   background-clip: text;
   text-shadow: 0px 4px 29.5px rgba(0, 0, 0, 0.4);
   text-align: center;
-      margin: 0;
-    height: 53px;
-    position: relative;
-    top: -20px;
+  margin: 0;
+  height: 53px;
+  position: relative;
+  top: -20px;
 }
 
 .experience-button {
@@ -100,8 +100,104 @@
 .experience-button-decoration {
   position: absolute;
   top: -25px;
-  right :-20;
+  right: -20;
   width: 60px;
   height: 60px;
   object-fit: contain;
+}
+
+.experience-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.experience-custom-button {
+  font-family: 'Abdomisr', sans-serif;
+  font-size: 25px;
+  font-weight: 900;
+  background: #6FAF74;
+  border: none;
+  padding: 2px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 0;
+  position: relative;
+  overflow: visible;
+  transition: background 0.3s ease;
+}
+
+.experience-custom-button-text {
+  background: linear-gradient(90deg, #5B1A1A 0%, #673C16 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.experience-custom-button:hover {
+  background: linear-gradient(90deg, #5B1A1A 0%, #673C16 100%);
+}
+
+.experience-custom-button:hover .experience-custom-button-text {
+  background: #6FAF74;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.experience-custom-button-decoration {
+  position: absolute;
+  top: -25px;
+  right: -20px;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.experience-gallery-container {
+  width: 100vw;
+  overflow: hidden;
+  margin: 60px 0 0 0;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.experience-gallery {
+  display: flex;
+  gap: 20px;
+  animation: scrollLeft 30s linear infinite;
+  width: fit-content;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.experience-gallery-item {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 350px;
+  height: 450px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.experience-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }

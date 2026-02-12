@@ -9,6 +9,7 @@
 
 .who-we-are-content {
   max-width: 1800px;
+  position: relative;
 }
 
 .who-we-are-title {
@@ -80,7 +81,7 @@
 .grid-item-title {
   font-family: 'Abdomisr', sans-serif;
   font-size: 26px;
-  margin:  0;
+  margin: 0;
   font-weight: bold;
 }
 
@@ -103,7 +104,8 @@
   line-height: 1.2;
   margin: 0;
 }
-.special{
+
+.special {
   line-height: 1.2;
 }
 
@@ -123,14 +125,17 @@
 .grid-item-list-white {
   color: #5B1A1A;
 }
-.grid-item-list-white li{
-margin-bottom: 5px;
+
+.grid-item-list-white li {
+  margin-bottom: 5px;
 }
-.special2{
+
+.special2 {
   margin-top: 5px;
 }
-.lh{
-      line-height: 31px;
+
+.lh {
+  line-height: 31px;
 }
 
 .fade-in-text {
@@ -140,4 +145,76 @@ margin-bottom: 5px;
 
 .fade-in-text.fade-in-visible {
   opacity: 1;
+}
+
+.who-we-are-decoration-left {
+  position: absolute;
+  top: 440px;
+  left: -120px;
+  width: 150px;
+  height: auto;
+  opacity: 0.6;
+  transform: rotate(-20deg);
+  z-index: 0;
+}
+
+.who-we-are-decoration-left path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawPath 3s ease-in-out infinite;
+}
+
+.who-we-are-decoration-left path:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.who-we-are-decoration-left path:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.who-we-are-decoration-left path:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.who-we-are-decoration-left path:nth-child(4) {
+  animation-delay: 0.9s;
+}
+
+.who-we-are-decoration-right {
+  position: absolute;
+  top: 120px;
+  right: -100px;
+  width: 140px;
+  height: auto;
+  opacity: 0.6;
+  transform: rotate(15deg);
+  z-index: 0;
+}
+
+.who-we-are-decoration-right path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawPath 3s ease-in-out infinite;
+}
+
+.who-we-are-decoration-right path:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.who-we-are-decoration-right path:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+@keyframes drawPath {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+
+  50% {
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    stroke-dashoffset: -1000;
+  }
 }

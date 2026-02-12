@@ -1,0 +1,86 @@
+.cta-section {
+    max-width: 1200px;
+    width: 100%;
+    margin: 40px auto 0;
+    position: relative;
+    background-image: url('/CTA1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.cta-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    border-radius: 30px;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 900px;
+}
+
+.cta-title {
+    font-family: 'Abdomisr', sans-serif;
+    font-size: 48px;
+    color: white;
+    margin: 0 0 40px 0;
+    line-height: 1.3;
+    font-weight: normal;
+}
+
+.cta-button {
+    font-family: 'Abdomisr', sans-serif;
+    font-size: 25px;
+    font-weight: 900;
+    background: #6FAF74;
+    border: none;
+    padding: 2px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    overflow: visible;
+    transition: background 0.3s ease;
+}
+
+.cta-button-text {
+    background: linear-gradient(90deg, #5B1A1A 0%, #673C16 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: linear-gradient(90deg, #5B1A1A 0%, #673C16 100%);
+}
+
+.cta-button:hover .cta-button-text {
+    background: #6FAF74;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cta-button-decoration {
+    position: absolute;
+    top: -25px;
+    right: -20px;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
