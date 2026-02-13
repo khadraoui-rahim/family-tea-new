@@ -1,5 +1,6 @@
 import './AboutUs.css';
 import SimpleNavbar from '../components/SimpleNavbar';
+import CTASection from '../cta-section/CTASection';
 
 function AboutUs() {
     return (
@@ -96,6 +97,8 @@ function AboutUs() {
                         Family Tea is built on a dynamic, passionate team distributed across roles: tea service, hospitality, logistics, specialized events, and content production.
                     </p>
                 </div>
+
+                <CTASection />
             </section>
         </div>
     );

@@ -14,7 +14,7 @@ const Footer = () => {
                     <Link to="/">Home</Link>
                     <Link to="/about-us">About Us</Link>
                     <Link to="/services">Services</Link>
-                    <Link to="/partners">Partners</Link>
+                    <Link to="/partners">Find Us</Link>
                     <Link to="/contact-us">Contact US</Link>
                     <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="footer-instagram">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

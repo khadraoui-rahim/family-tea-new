@@ -382,3 +382,21 @@
         font-size: 24px;
     }
 }
+
+/* Ensure CTA section displays properly within AboutUs */
+.about-us-content .cta-section {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.about-us-content .cta-overlay {
+    opacity: 1;
+}
+
+.about-us-content .cta-title {
+    opacity: 1;
+}
+
+.about-us-content .cta-button {
+    opacity: 1;
+}
