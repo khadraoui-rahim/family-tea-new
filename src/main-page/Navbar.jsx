@@ -1,5 +1,5 @@
 import './Navbar.css'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import gsap from 'gsap'
 
@@ -11,6 +11,7 @@ function Navbar() {
     { name: 'Partners', path: '/partners' },
     { name: 'Contact US', path: '/contact-us' }
   ];
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const decorationRef = useRef(null);
   const sandRef = useRef(null);
   const navListRef = useRef(null);
@@ -19,7 +20,8 @@ function Navbar() {
   const subtitleRef = useRef(null);
   const descriptionRef = useRef(null);
   const buttonRef = useRef(null);
-  // fuck this bs
+  const hamburgerRef = useRef(null);
+  const mobileMenuRef = useRef(null);
   useEffect(() => {
     const timeline = gsap.timeline();
 
@@ -34,6 +36,13 @@ function Navbar() {
       { opacity: 0, y: -20 },
       { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" },
       "-=0.2"
+    );
+
+    // Hamburger menu
+    timeline.fromTo(hamburgerRef.current,
+      { opacity: 0, y: -20 },
+      { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" },
+      "-=0.3"
     );
 
     // Logo
@@ -77,6 +86,26 @@ function Navbar() {
     });
   }, []);
 
+  useEffect(() => {
+    if (isMenuOpen && mobileMenuRef.current) {
+      gsap.fromTo(mobileMenuRef.current,
+        { opacity: 0, scale: 0.8 },
+        { opacity: 1, scale: 1, duration: 0.3, ease: "power2.out" }
+      );
+    }
+  }, [isMenuOpen]);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = (e) => {
+    if (e) {
+      e.stopPropagation();
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className="navbar">
       <img
@@ -85,7 +114,7 @@ function Navbar() {
         alt="Sand"
         className="navbar-sand"
       />
-      <div className="navbar-content">
+      <div className={`navbar-content ${isMenuOpen ? 'menu-open' : ''}`}>
         <ul ref={navListRef} className="nav-list">
           {navItems.map((item, index) => (
             <li key={index} className="nav-item">
@@ -95,6 +124,16 @@ function Navbar() {
             </li>
           ))}
         </ul>
+        <button
+          ref={hamburgerRef}
+          className={`hamburger-menu ${isMenuOpen ? 'open' : ''}`}
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+        </button>
         <img
           ref={logoRef}
           src="/Main-page/logos/logo.png"
@@ -114,6 +153,23 @@ function Navbar() {
           />
         </button>
       </div>
+
+      {isMenuOpen && (
+        <>
+          <div className="mobile-menu-overlay" onClick={closeMenu}></div>
+          <div ref={mobileMenuRef} className="mobile-menu">
+            <ul className="mobile-nav-list">
+              {navItems.map((item, index) => (
+                <li key={index} className="mobile-nav-item">
+                  <Link to={item.path} className="mobile-nav-link" onClick={closeMenu}>
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </>
+      )}
     </nav>
   )
 }

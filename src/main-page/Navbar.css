@@ -12,7 +12,7 @@
   transform: translateX(-50%);
   max-width: 1536px;
   width: 100%;
-  z-index: 10;
+  z-index: 1002;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,6 +37,10 @@
   align-items: center;
   gap: 0px;
   pointer-events: auto;
+}
+
+.navbar-content.menu-open {
+  min-height: 100vh;
 }
 
 .nav-list {
@@ -130,6 +134,7 @@
   position: relative;
   overflow: visible;
   color: transparent;
+  scale: auto;
 }
 
 .navbar-button-text {
@@ -182,4 +187,236 @@
   width: 60px;
   height: 60px;
   object-fit: contain;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 40px;
+  height: 35px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  padding-top: 20px;
+  z-index: 1002;
+  margin: 0 auto;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.hamburger-menu:hover {
+  transform: scale(1.1);
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #5B1A1A 0%, #673C16 100%);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hamburger-menu.open {
+  transform: scale(1.15);
+}
+
+.hamburger-menu.open .hamburger-line {
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.hamburger-menu.open .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translateY(12px);
+}
+
+.hamburger-menu.open .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.open .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translateY(-12px);
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+/* Mobile Menu Popup */
+.mobile-menu {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #FFF8E7 0%, #FFE4B5 100%);
+  border-radius: 20px;
+  padding: 50px 40px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  min-width: 320px;
+  max-width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  pointer-events: auto;
+}
+
+.mobile-menu-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #5B1A1A;
+  line-height: 1;
+  padding: 5px 10px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: opacity 0.3s;
+}
+
+.mobile-menu-close:hover {
+  opacity: 0.7;
+}
+
+.mobile-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+
+.mobile-nav-item {
+  text-align: center;
+}
+
+.mobile-nav-link {
+  font-family: 'Abdomisr', sans-serif;
+  font-weight: 900;
+  font-size: 32px;
+  background: linear-gradient(90deg, #5B1A1A 0%, #673C16 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  display: block;
+  padding: 12px 20px;
+  white-space: nowrap;
+}
+
+.mobile-nav-link:hover {
+  opacity: 0.7;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .nav-list {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    height: 55px;
+  }
+
+  .mobile-menu-overlay {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .navbar-subtitle {
+    font-size: 60px;
+    max-width: 350px;
+  }
+
+  .navbar-description {
+    font-size: 28px;
+  }
+
+  .navbar-logo {
+    max-width: 100px;
+    padding-top: 20px;
+  }
+
+  .navbar-title {
+    font-size: 28px;
+  }
+
+  .navbar-button {
+    font-size: 20px;
+    margin-top: 30px;
+  }
+
+  .button-decoration {
+    width: 40px;
+    height: 40px;
+    top: -15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-subtitle {
+    font-size: 81px;
+    max-width: 361px;
+  }
+
+  .navbar-description {
+    font-size: 38px;
+    line-height: 1;
+    width: 306px;
+    padding-top: 44px;
+  }
+
+  .navbar-logo {
+    max-width: 180px;
+    padding-top: 15px;
+    position: relative;
+    left: -30px;
+
+  }
+
+  .navbar-title {
+    font-size: 40px;
+  }
+
+  .navbar-button {
+    font-size: 18px;
+    padding: 2px 18px;
+    scale: 1.6;
+    margin-top: 101px;
+  }
+
+  .mobile-nav-link {
+    font-size: 28px;
+  }
+
+  .mobile-menu {
+    min-width: 280px;
+    padding: 45px 30px;
+  }
 }

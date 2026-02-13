@@ -82,23 +82,27 @@ function WhoWeAre() {
             </div>
             <img src="/who-we-are/1.png" alt="" className="grid-item-image" />
           </div>
-          <div className="grid-item grid-item-red">
-            <div className="grid-item-content fade-in-text" ref={(el) => (textElementsRef.current[2] = el)}>
-              <h3 className="grid-item-title lh">Rooted in authenticity</h3>
-              <p className="grid-item-text">We don't just serve tea — we revive a ritual, tell a story, and turn every cup into a shared moment.</p>
+
+          <div className="mobile-combined-slide">
+            <div className="grid-item grid-item-red">
+              <div className="grid-item-content fade-in-text" ref={(el) => (textElementsRef.current[2] = el)}>
+                <h3 className="grid-item-title lh">Rooted in authenticity</h3>
+                <p className="grid-item-text">We don't just serve tea — we revive a ritual, tell a story, and turn every cup into a shared moment.</p>
+              </div>
+              <img src="/who-we-are/2.png" alt="" className="grid-item-image" />
             </div>
-            <img src="/who-we-are/2.png" alt="" className="grid-item-image" />
-          </div>
-          <div className="grid-item grid-item-green">
-            <div className="grid-item-content fade-in-text" ref={(el) => (textElementsRef.current[3] = el)}>
-              <p className="grid-item-title special">
-                Authentic by nature.<br />
-                Positive energy only.<br />
-                Hospitality guaranteed.
-              </p>
+            <div className="grid-item grid-item-green">
+              <div className="grid-item-content fade-in-text" ref={(el) => (textElementsRef.current[3] = el)}>
+                <p className="grid-item-title special">
+                  Authentic by nature.<br />
+                  Positive energy only.<br />
+                  Hospitality guaranteed.
+                </p>
+              </div>
+              <img src="/who-we-are/3.png" alt="" className="grid-item-image" />
             </div>
-            <img src="/who-we-are/3.png" alt="" className="grid-item-image" />
           </div>
+
           <div className="grid-item grid-item-white">
             <div className="grid-item-content grid-item-content-white fade-in-text" ref={(el) => (textElementsRef.current[4] = el)}>
               <h3 className="grid-item-title grid-item-title-white">Designed for real moments</h3>
