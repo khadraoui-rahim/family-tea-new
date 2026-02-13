@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './TrustedByMany.css';
 import gsap from 'gsap';
 
@@ -8,6 +9,7 @@ const TrustedByMany = () => {
     const ctaOverlayRef = useRef(null);
     const ctaTitleRef = useRef(null);
     const ctaButtonRef = useRef(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
         // Button decoration animation
@@ -118,7 +120,7 @@ const TrustedByMany = () => {
                         Let's create meaningful moments together,<br />
                         inspired by the Saharan tea tradition.
                     </h2>
-                    <button className="cta-button" ref={ctaButtonRef}>
+                    <button className="cta-button" ref={ctaButtonRef} onClick={() => navigate('/partners')}>
                         <span className="cta-button-text">Become a Partner</span>
                         <img
                             ref={decorationRef}

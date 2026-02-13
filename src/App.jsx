@@ -7,10 +7,12 @@ import Services from './pages/Services'
 import Partners from './pages/Partners'
 import ContactUs from './pages/ContactUs'
 import Footer from './footer/Footer'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="app-container">
         <Routes>
           <Route path="/" element={<Home />} />

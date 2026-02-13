@@ -1,8 +1,11 @@
 import './AboutUs.css';
+import { useNavigate } from 'react-router-dom';
 import SimpleNavbar from '../components/SimpleNavbar';
 import CTASection from '../cta-section/CTASection';
 
 function AboutUs() {
+    const navigate = useNavigate();
+
     return (
         <div className="about-us-page">
             <section className="about-us-hero">
@@ -66,7 +69,7 @@ function AboutUs() {
                         We believe that tea is a bridge that brings people together, and that every gathering holds the potential for warm moments and genuine connection. From authentic hospitality to thoughtful details, we design our services to suit every space and occasion, from intimate gatherings to grand events, while keeping warmth, authenticity, and cultural spirit at the heart of every experience.
                     </p>
                     <div className="about-us-button-wrapper">
-                        <button className="about-us-button">
+                        <button className="about-us-button" onClick={() => navigate('/partners')}>
                             <span className="about-us-button-text">Become a Partner</span>
                             <img
                                 src="/Main-page/buttons/btn-asset-1.png"

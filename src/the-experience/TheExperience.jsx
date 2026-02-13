@@ -1,10 +1,12 @@
 import React, { useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './TheExperience.css';
 import '../main-page/Navbar.css';
 import gsap from 'gsap';
 
 const TheExperience = () => {
   const decorationRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     gsap.to(decorationRef.current, {
@@ -22,7 +24,7 @@ const TheExperience = () => {
       <h1>The Experience</h1>
       <h2 className="experience-subheader">تراث دفئ ذكرايات</h2>
       <div className="experience-button-wrapper">
-        <button className="experience-custom-button">
+        <button className="experience-custom-button" onClick={() => navigate('/services')}>
           <span className="experience-custom-button-text">See Now</span>
           <img
             ref={decorationRef}

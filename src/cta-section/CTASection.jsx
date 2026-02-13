@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './CTASection.css';
 import gsap from 'gsap';
 
 const CTASection = () => {
     const decorationRef = useRef(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
         gsap.to(decorationRef.current, {
@@ -24,7 +26,7 @@ const CTASection = () => {
                     Let's create meaningful moments together,<br />
                     inspired by the Saharan tea tradition.
                 </h2>
-                <button className="cta-button">
+                <button className="cta-button" onClick={() => navigate('/partners')}>
                     <span className="cta-button-text">Become a Partner</span>
                     <img
                         ref={decorationRef}

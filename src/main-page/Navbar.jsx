@@ -1,6 +1,6 @@
 import './Navbar.css'
 import { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import gsap from 'gsap'
 
 function Navbar() {
@@ -12,6 +12,7 @@ function Navbar() {
     { name: 'Contact US', path: '/contact-us' }
   ];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
   const decorationRef = useRef(null);
   const sandRef = useRef(null);
   const navListRef = useRef(null);
@@ -143,7 +144,7 @@ function Navbar() {
         <h1 ref={titleRef} className="navbar-title">شاي العائلة</h1>
         <h2 ref={subtitleRef} className="navbar-subtitle">More than Tea, an Experience</h2>
         <p ref={descriptionRef} className="navbar-description">More than tea… a Saharan experience</p>
-        <button ref={buttonRef} className="navbar-button">
+        <button ref={buttonRef} className="navbar-button" onClick={() => navigate('/contact-us')}>
           <span className="navbar-button-text">Book Now</span>
           <img
             ref={decorationRef}
