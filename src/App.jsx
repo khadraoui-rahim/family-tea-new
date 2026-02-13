@@ -1,24 +1,27 @@
 
 import './App.css'
-import BackImages from './main-page/BackImages'
-import Navbar from './main-page/Navbar'
-import WhoWeAre from './who-we-are/WhoWeAre'
-import TheExperience from './the-experience/TheExperience'
-import TrustedByMany from './trusted-by-many/TrustedByMany'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import AboutUs from './pages/AboutUs'
+import Services from './pages/Services'
+import Partners from './pages/Partners'
+import ContactUs from './pages/ContactUs'
 import Footer from './footer/Footer'
 
 function App() {
   return (
-    <div className="app-container">
-      <section className="main-page-section">
-        <BackImages />
-        <Navbar />
-      </section>
-      <WhoWeAre />
-      <TheExperience />
-      <TrustedByMany />
-      <Footer />
-    </div>
+    <Router>
+      <div className="app-container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/partners" element={<Partners />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   )
 }
 

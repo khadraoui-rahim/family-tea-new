@@ -1,9 +1,16 @@
 import './Navbar.css'
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import gsap from 'gsap'
 
 function Navbar() {
-  const navItems = ['Home', 'About Us', 'Services', 'Partners', 'Contact US'];
+  const navItems = [
+    { name: 'Home', path: '/' },
+    { name: 'About Us', path: '/about-us' },
+    { name: 'Services', path: '/services' },
+    { name: 'Partners', path: '/partners' },
+    { name: 'Contact US', path: '/contact-us' }
+  ];
   const decorationRef = useRef(null);
   const sandRef = useRef(null);
   const navListRef = useRef(null);
@@ -12,12 +19,12 @@ function Navbar() {
   const subtitleRef = useRef(null);
   const descriptionRef = useRef(null);
   const buttonRef = useRef(null);
-// fuck this bs
+  // fuck this bs
   useEffect(() => {
     const timeline = gsap.timeline();
 
     // Sand animation
-    timeline.fromTo(sandRef.current, 
+    timeline.fromTo(sandRef.current,
       { y: -100, opacity: 0 },
       { y: 0, opacity: 1, duration: 0.4, ease: "power2.out" }
     );
@@ -72,26 +79,26 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <img 
+      <img
         ref={sandRef}
-        src="/Main-page/navbar/sand.png" 
-        alt="Sand" 
+        src="/Main-page/navbar/sand.png"
+        alt="Sand"
         className="navbar-sand"
       />
       <div className="navbar-content">
         <ul ref={navListRef} className="nav-list">
           {navItems.map((item, index) => (
             <li key={index} className="nav-item">
-              <a href={`#${item.toLowerCase().replace(' ', '-')}`} className="nav-link">
-                {item}
-              </a>
+              <Link to={item.path} className="nav-link">
+                {item.name}
+              </Link>
             </li>
           ))}
         </ul>
-        <img 
+        <img
           ref={logoRef}
-          src="/Main-page/logos/logo.png" 
-          alt="Logo" 
+          src="/Main-page/logos/logo.png"
+          alt="Logo"
           className="navbar-logo"
         />
         <h1 ref={titleRef} className="navbar-title">شاي العائلة</h1>
@@ -99,10 +106,10 @@ function Navbar() {
         <p ref={descriptionRef} className="navbar-description">More than tea… a Saharan experience</p>
         <button ref={buttonRef} className="navbar-button">
           <span className="navbar-button-text">Book Now</span>
-          <img 
+          <img
             ref={decorationRef}
-            src="/Main-page/buttons/btn-asset-1.png" 
-            alt="" 
+            src="/Main-page/buttons/btn-asset-1.png"
+            alt=""
             className="button-decoration"
           />
         </button>

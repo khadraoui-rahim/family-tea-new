@@ -1,0 +1,384 @@
+.about-us-page {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #F2D2A9;
+}
+
+.about-us-hero {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    padding-bottom: 100px;
+}
+
+.about-us-sand {
+    position: absolute;
+    top: 0;
+    transform: translateY(-5%);
+    max-width: 1700px;
+    width: 200%;
+    height: auto;
+    display: block;
+    z-index: 0;
+}
+
+.about-us-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px;
+}
+
+.about-us-main-title {
+    font-family: 'Abdomisr', sans-serif;
+    font-size: 84px;
+    background: linear-gradient(90deg, #5B1A1A 0%, #FF8D28 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0 0 60px 0;
+    text-align: center;
+}
+
+.about-us-story,
+.about-us-mission,
+.about-us-values {
+    margin-bottom: 60px;
+}
+
+.about-us-section-title {
+    font-family: 'Abdomisr', sans-serif;
+    font-size: 48px;
+    background: linear-gradient(90deg, #5B1A1A 0%, #FF8D28 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0 0 30px 0;
+}
+
+.about-us-text {
+    font-family: 'Abdomisr', sans-serif;
+    font-size: 24px;
+    color: #5B1A1A;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.value-card {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.value-title {
+    font-family: 'Abdomisr', sans-serif;
+    font-size: 32px;
+    background: linear-gradient(90deg, #5B1A1A 0%, #743308 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0 0 15px 0;
+}
+
+.value-text {
+    font-family: 'Abdomisr', sans-serif;
+    font-size: 20px;
+    color: #5B1A1A;
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-us-main-title {
+        font-size: 56px;
+    }
+
+    .about-us-section-title {
+        font-size: 36px;
+    }
+}
+
+.about-us-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px;
+}
+
+.about-us-title {
+    font-family: 'Abdomisr', sans-serif;
+    font-size: 84px;
+    background: linear-gradient(90deg, #5B1A1A 0%, #FF8D28 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0;
+    text-align: center;
+    position: relative;
+    top: -15px;
+}
+
+.about-us-description {
+    font-family: 'Abdomisr', sans-serif;
+    font-size: 28px;
+    background: linear-gradient(90deg, #5B1A1A 0%, #d16f18 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+    line-height: 1;
+    margin: 0px auto 0;
+    max-width: 900px;
+    position: relative;
+    top: -40px;
+}
+
+.about-us-team-image {
+    width: 830px;
+    max-height: 350px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+    position: relative;
+    top: -20px;
+    object-fit: cover;
+}
+
+.about-us-description-second {
+    top: -10px;
+}
+
+.about-us-paragraph-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-us-decoration-left {
+    position: absolute;
+    top: 50%;
+    left: -100px;
+    width: 100px;
+    height: auto;
+    opacity: 0.2;
+    transform: translateY(-50%) rotate(-10deg);
+    z-index: 0;
+    animation: floatLeft 4s ease-in-out infinite;
+}
+
+@keyframes floatLeft {
+
+    0%,
+    100% {
+        transform: translateY(-50%) translateX(0) rotate(-10deg);
+    }
+
+    25% {
+        transform: translateY(-45%) translateX(-5px) rotate(-12deg);
+    }
+
+    50% {
+        transform: translateY(-50%) translateX(0) rotate(-10deg);
+    }
+
+    75% {
+        transform: translateY(-55%) translateX(5px) rotate(-8deg);
+    }
+}
+
+.about-us-decoration-right {
+    position: absolute;
+    top: 50%;
+    right: -90px;
+    width: 90px;
+    height: auto;
+    opacity: 0.2;
+    transform: translateY(-50%) rotate(10deg);
+    z-index: 0;
+    animation: floatRight 4.5s ease-in-out infinite;
+}
+
+@keyframes floatRight {
+
+    0%,
+    100% {
+        transform: translateY(-50%) translateX(0) rotate(10deg);
+    }
+
+    25% {
+        transform: translateY(-55%) translateX(5px) rotate(12deg);
+    }
+
+    50% {
+        transform: translateY(-50%) translateX(0) rotate(10deg);
+    }
+
+    75% {
+        transform: translateY(-45%) translateX(-5px) rotate(8deg);
+    }
+}
+
+.about-us-button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    position: relative;
+    top: -10px;
+}
+
+.about-us-button {
+    font-family: 'Abdomisr', sans-serif;
+    font-size: 25px;
+    font-weight: 900;
+    background: #6FAF74;
+    border: none;
+    padding: 2px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    overflow: visible;
+    transition: background 0.3s ease;
+}
+
+.about-us-button-text {
+    background: linear-gradient(90deg, #5B1A1A 0%, #673C16 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.about-us-button:hover {
+    background: linear-gradient(90deg, #5B1A1A 0%, #673C16 100%);
+}
+
+.about-us-button:hover .about-us-button-text {
+    background: #6FAF74;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.about-us-button-decoration {
+    position: absolute;
+    top: -25px;
+    right: -20px;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    animation: floatDecoration 2s ease-in-out infinite;
+}
+
+@keyframes floatDecoration {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.our-team-section {
+    max-width: 1200px;
+    margin: 80px auto 0;
+    text-align: center;
+}
+
+.our-team-title {
+    font-family: 'Abdomisr', sans-serif;
+    font-size: 72px;
+    background: linear-gradient(90deg, #5B1A1A 0%, #FF8D28 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0;
+}
+
+.team-roles {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.team-role {
+    flex: 1;
+    min-width: 250px;
+    max-width: 260px;
+}
+
+.role-number {
+    font-family: 'Abdomisr', sans-serif;
+    font-size: 120px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #5B1A1A 0%, #FF8D28 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 10px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.role-title {
+    font-family: 'Abdomisr', sans-serif;
+    font-size: 28px;
+    background: linear-gradient(90deg, #5B1A1A 0%, #d16f18 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.team-description {
+    font-family: 'Abdomisr', sans-serif;
+    font-size: 24px;
+    background: linear-gradient(90deg, #5B1A1A 0%, #d16f18 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    max-width: 850px;
+    margin: 0 auto;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .team-roles {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .our-team-title {
+        font-size: 56px;
+    }
+
+    .role-number {
+        font-size: 80px;
+    }
+
+    .role-title {
+        font-size: 24px;
+    }
+}

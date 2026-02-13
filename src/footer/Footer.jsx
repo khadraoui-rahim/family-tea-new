@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -10,11 +11,11 @@ const Footer = () => {
                     <img src="/Main-page/logos/logo.png" alt="Tea Family Logo" />
                 </div>
                 <nav className="footer-nav">
-                    <a href="#home">Home</a>
-                    <a href="#about-us">About Us</a>
-                    <a href="#services">Services</a>
-                    <a href="#partners">Partners</a>
-                    <a href="#contact-us">Contact US</a>
+                    <Link to="/">Home</Link>
+                    <Link to="/about-us">About Us</Link>
+                    <Link to="/services">Services</Link>
+                    <Link to="/partners">Partners</Link>
+                    <Link to="/contact-us">Contact US</Link>
                     <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="footer-instagram">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <defs>

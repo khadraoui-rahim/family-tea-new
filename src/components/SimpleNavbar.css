@@ -1,0 +1,140 @@
+@font-face {
+    font-family: 'Abdomisr';
+    src: url('/font/abdomisr.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.simple-navbar {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1536px;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    overflow: visible;
+}
+
+.simple-navbar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    pointer-events: auto;
+    padding-top: 20px;
+}
+
+.simple-nav-list {
+    display: flex;
+    gap: 60px;
+    list-style: none;
+    margin: 0;
+    position: relative;
+    top: -15px;
+}
+
+.simple-nav-item {
+    margin: 0;
+}
+
+.simple-nav-link {
+    font-family: 'Abdomisr', sans-serif;
+    font-weight: 900;
+    font-size: 32px;
+    background: linear-gradient(90deg, #5B1A1A 0%, #673C16 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.simple-nav-link:hover {
+    opacity: 0.8;
+}
+
+.simple-navbar-logo {
+    max-width: 120px;
+    height: auto;
+    display: block;
+    position: relative;
+    left: -18px;
+    top: -25px;
+}
+
+
+.simple-navbar-decoration {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 120px;
+    height: auto;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.simple-navbar-decoration {
+    animation: floatSVG 4s ease-in-out infinite;
+}
+
+@keyframes floatSVG {
+
+    0%,
+    100% {
+        transform: translateY(-50%) translateX(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-55%) translateX(5px) rotate(2deg);
+    }
+
+    50% {
+        transform: translateY(-50%) translateX(0) rotate(0deg);
+    }
+
+    75% {
+        transform: translateY(-45%) translateX(-5px) rotate(-2deg);
+    }
+}
+
+.simple-navbar-decoration-left {
+    position: absolute;
+    left: 10%;
+    top: 100%;
+    transform: translateY(-50%);
+    width: 120px;
+    height: auto;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: -1;
+    animation: floatSVGLeft 4.5s ease-in-out infinite;
+}
+
+@keyframes floatSVGLeft {
+
+    0%,
+    100% {
+        transform: translateY(-50%) translateX(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-45%) translateX(-5px) rotate(-2deg);
+    }
+
+    50% {
+        transform: translateY(-50%) translateX(0) rotate(0deg);
+    }
+
+    75% {
+        transform: translateY(-55%) translateX(5px) rotate(2deg);
+    }
+}
