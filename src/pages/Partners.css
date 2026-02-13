@@ -48,16 +48,84 @@
 @media (max-width: 768px) {
     .partners-title {
         font-size: 56px;
+        padding-top: 30px;
+    }
+
+    .partners-content {
+        padding: 173px 20px 40px;
+    }
+
+    .video-container {
+        margin: 40px auto 0;
+        width: 100%;
+    }
+
+    .partners-video {
+        max-height: 50vh;
+        width: 100%;
+        border-radius: 12px 12px 0 0;
+    }
+
+    .video-controls {
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .time-display {
+        font-size: 12px;
+        min-width: 80px;
+    }
+
+    .volume-slider {
+        width: 60px;
+    }
+
+    .play-btn {
+        width: 36px;
+        height: 36px;
+    }
+
+    .volume-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    .partners-content .cta-section {
+        margin-top: 60px;
     }
 }
 
-.video-container {
-    max-width: 900px;
-    margin: 60px auto 0;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+@media (max-width: 480px) {
+    .partners-title {
+        font-size: 42px;
+    }
+
+    .video-container {
+        margin: 30px auto 0;
+    }
+
+    .partners-video {
+        max-height: 40vh;
+    }
+
+    .video-controls {
+        gap: 8px;
+        padding: 12px;
+    }
+
+    .play-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    .volume-btn {
+        width: 28px;
+        height: 28px;
+    }
+
+    .volume-slider {
+        width: 50px;
+    }
 }
 
 .partners-video {
@@ -66,6 +134,7 @@
     width: auto;
     display: block;
     border-radius: 12px 12px 0 0;
+    margin: 0 auto;
 }
 
 .video-controls {
@@ -77,6 +146,7 @@
     background: linear-gradient(90deg, rgba(91, 26, 26, 0.95) 0%, rgba(255, 141, 40, 0.95) 100%);
     border-radius: 0 0 12px 12px;
     box-sizing: border-box;
+    margin: 0 auto;
 }
 
 .control-btn {
@@ -201,31 +271,10 @@
     transform: scale(1.2);
 }
 
-@media (max-width: 768px) {
-    .video-controls {
-        gap: 10px;
-        padding: 15px;
-    }
-
-    .time-display {
-        font-size: 12px;
-        min-width: 80px;
-    }
-
-    .volume-slider {
-        width: 60px;
-    }
-
-    .play-btn {
-        width: 36px;
-        height: 36px;
-    }
-
-    .volume-btn {
-        width: 32px;
-        height: 32px;
-    }
+.volume-slider::-moz-range-thumb:hover {
+    transform: scale(1.2);
 }
+
 
 .partners-content .cta-section {
     margin-top: 80px;
