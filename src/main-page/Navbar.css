@@ -121,21 +121,6 @@
   text-align: center;
 }
 
-.navbar-button {
-  font-family: 'Abdomisr', sans-serif;
-  font-size: 25px;
-  font-weight: 900;
-  background: #6FAF74;
-  border: none;
-  padding: 2px 22px;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-top: 60px;
-  position: relative;
-  overflow: visible;
-  color: transparent;
-  scale: auto;
-}
 
 .navbar-button-text {
   background: linear-gradient(90deg, #5B1A1A 0%, #673C16 100%);
@@ -183,7 +168,7 @@
 .button-decoration {
   position: absolute;
   top: -25px;
-  right: -20;
+  right: -20px;
   width: 60px;
   height: 60px;
   object-fit: contain;
@@ -380,6 +365,24 @@
 }
 
 @media (max-width: 480px) {
+  .gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120vh;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #F2D2A9 85.1%);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .main-page-section {
+    width: 100vw;
+    height: 120vh;
+    position: relative;
+    overflow: hidden;
+  }
+
   .navbar-subtitle {
     font-size: 81px;
     max-width: 361px;
@@ -419,4 +422,20 @@
     min-width: 280px;
     padding: 45px 30px;
   }
+}
+
+.navbar-button {
+  font-family: 'Abdomisr', sans-serif;
+  font-size: 25px;
+  font-weight: 900;
+  background: #6FAF74;
+  border: none;
+  padding: 2px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 60px;
+  position: relative;
+  overflow: visible;
+  color: transparent;
+  scale: 1 !important;
 }
