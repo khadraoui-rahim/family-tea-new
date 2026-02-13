@@ -118,30 +118,80 @@
 }
 
 @media (max-width: 768px) {
+    .services-title {
+        font-size: 56px;
+        padding-top: 30px;
+    }
+
+    .services-content {
+        padding-top: 173px;
+    }
+
     .service-card {
         flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .service-card-reverse {
+        flex-direction: column;
+    }
+
+    .service-card-reverse .service-details {
+        order: 1;
+    }
+
+    .service-card-reverse .service-images {
+        order: 2;
+    }
+
+    .service-details {
+        order: 1;
+        width: 100%;
+        text-align: center;
     }
 
     .service-images {
-        flex-direction: column;
-        align-items: center;
+        order: 2;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
     }
 
     .service-image {
-        max-width: 100%;
+        max-width: 45%;
+        height: 250px;
     }
 
     .service-title {
-        font-size: 32px;
+        font-size: 36px;
+        text-align: center;
+        line-height: 1.1;
+    }
+
+    .service-list {
+        text-align: center;
     }
 
     .service-list li {
-        font-size: 18px;
+        font-size: 20px;
+        padding-left: 0;
+        line-height: 1.3;
+    }
+
+    .service-list li::before {
+        display: none;
     }
 }
 
 .service-card-reverse {
-    flex-direction: revert;
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+    .service-card-reverse {
+        flex-direction: column !important;
+    }
 }
 
 .service-card-reverse {
@@ -186,6 +236,15 @@
     }
 }
 
+@media (max-width: 768px) {
+    .service-decoration-left {
+        display: block;
+        left: -30px;
+        width: 60px;
+        opacity: 0.3;
+    }
+}
+
 .service-card-last {
     position: relative;
 }
@@ -224,6 +283,16 @@
 @media (max-width: 1024px) {
     .service-card-last .service-decoration-right {
         display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-card-last .service-decoration-right {
+        display: block;
+        right: -40px;
+        bottom: 20px;
+        width: 80px;
+        opacity: 0.3;
     }
 }
 
