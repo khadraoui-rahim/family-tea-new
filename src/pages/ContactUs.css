@@ -1,0 +1,158 @@
+.contact-us-page {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #F2D2A9;
+}
+
+.contact-us-hero {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    padding-bottom: 100px;
+}
+
+.contact-us-sand {
+    position: absolute;
+    top: 0;
+    transform: translateY(-5%);
+    max-width: 1700px;
+    width: 200%;
+    height: auto;
+    display: block;
+    z-index: 0;
+}
+
+.contact-us-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px;
+}
+
+.contact-us-content .cta-section {
+    max-width: 1200px;
+}
+
+.contact-us-title {
+    font-family: 'Abdomisr', sans-serif;
+    font-size: 84px;
+    background: linear-gradient(90deg, #5B1A1A 0%, #FF8D28 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    position: relative;
+    top: -15px;
+}
+
+.contact-form {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+    position: relative;
+    top: -95px;
+    transform: scale(.8);
+}
+
+.form-group {}
+
+.form-group label {
+    font-family: 'Abdomisr', sans-serif;
+    font-size: 20px;
+    background: linear-gradient(90deg, #5B1A1A 0%, #d16f18 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 14px;
+    font-family: 'Abdomisr', sans-serif;
+    font-size: 14px;
+    border: 2px solid #d16f18;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #FF8D28;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(255, 141, 40, 0.1);
+}
+
+.form-group input.valid,
+.form-group textarea.valid {
+    border-color: #6FAF74;
+}
+
+.form-group input.error,
+.form-group textarea.error {
+    border-color: #d32f2f;
+}
+
+.error-message {
+    font-family: 'Abdomisr', sans-serif;
+    font-size: 14px;
+    color: #d32f2f;
+    display: block;
+    margin-top: 5px;
+}
+
+.submit-button {
+    font-family: 'Abdomisr', sans-serif;
+    font-size: 25px;
+    font-weight: 900;
+    background: #6FAF74;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: block;
+    margin: 30px auto 0;
+}
+
+.submit-button-text {
+    background: linear-gradient(90deg, #5B1A1A 0%, #673C16 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+    background: linear-gradient(90deg, #5B1A1A 0%, #673C16 100%);
+}
+
+.submit-button:hover .submit-button-text {
+    background: #6FAF74;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+@media (max-width: 768px) {
+    .contact-us-title {
+        font-size: 56px;
+    }
+
+    .contact-form {
+        padding: 30px 20px;
+    }
+
+    .form-group label {
+        font-size: 18px;
+    }
+}
