@@ -1,3 +1,5 @@
+import CTASection from '../cta-section/CTASection';
+
 function ContactUs() {
     return (
         <div style={{ minHeight: '100vh', padding: '100px 20px', backgroundColor: '#F2D2A9' }}>
@@ -7,6 +9,7 @@ function ContactUs() {
             <p style={{ textAlign: 'center', fontFamily: 'Abdomisr, sans-serif', fontSize: '24px', marginTop: '40px' }}>
                 Coming Soon...
             </p>
+            <CTASection />
         </div>
     );
 }
