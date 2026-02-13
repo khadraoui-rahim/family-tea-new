@@ -106,10 +106,15 @@
 
     .about-us-main-title {
         font-size: 56px;
+        padding-top: 30px;
     }
 
     .about-us-section-title {
         font-size: 36px;
+    }
+
+    .about-us-content {
+        padding-top: 173px !important;
     }
 }
 

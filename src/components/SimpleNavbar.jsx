@@ -1,5 +1,5 @@
 import './SimpleNavbar.css';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 
@@ -12,8 +12,11 @@ function SimpleNavbar({ customLeftDecoration, customRightDecoration }) {
         { name: 'Contact US', path: '/contact-us' }
     ];
 
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const navListRef = useRef(null);
     const logoRef = useRef(null);
+    const hamburgerRef = useRef(null);
+    const mobileMenuRef = useRef(null);
 
     useEffect(() => {
         const timeline = gsap.timeline();
@@ -24,6 +27,13 @@ function SimpleNavbar({ customLeftDecoration, customRightDecoration }) {
             { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" }
         );
 
+        // Hamburger menu
+        timeline.fromTo(hamburgerRef.current,
+            { opacity: 0, y: -20 },
+            { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" },
+            "-=0.3"
+        );
+
         // Logo
         timeline.fromTo(logoRef.current,
             { opacity: 0, y: -20 },
@@ -31,9 +41,29 @@ function SimpleNavbar({ customLeftDecoration, customRightDecoration }) {
         );
     }, []);
 
+    useEffect(() => {
+        if (isMenuOpen && mobileMenuRef.current) {
+            gsap.fromTo(mobileMenuRef.current,
+                { opacity: 0, scale: 0.8 },
+                { opacity: 1, scale: 1, duration: 0.3, ease: "power2.out" }
+            );
+        }
+    }, [isMenuOpen]);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
+    const closeMenu = (e) => {
+        if (e) {
+            e.stopPropagation();
+        }
+        setIsMenuOpen(false);
+    };
+
     return (
         <nav className="simple-navbar">
-            <div className="simple-navbar-content">
+            <div className={`simple-navbar-content ${isMenuOpen ? 'menu-open' : ''}`}>
                 {customLeftDecoration || (
                     <svg className="simple-navbar-decoration-left" width="178" height="190" viewBox="0 0 178 190" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_d_left)">
@@ -77,6 +107,16 @@ function SimpleNavbar({ customLeftDecoration, customRightDecoration }) {
                         </li>
                     ))}
                 </ul>
+                <button
+                    ref={hamburgerRef}
+                    className={`simple-hamburger-menu ${isMenuOpen ? 'open' : ''}`}
+                    onClick={toggleMenu}
+                    aria-label="Toggle menu"
+                >
+                    <span className="simple-hamburger-line"></span>
+                    <span className="simple-hamburger-line"></span>
+                    <span className="simple-hamburger-line"></span>
+                </button>
                 <img
                     ref={logoRef}
                     src="/Main-page/logos/logo.png"
@@ -119,6 +159,23 @@ function SimpleNavbar({ customLeftDecoration, customRightDecoration }) {
                     </svg>
                 )}
             </div>
+
+            {isMenuOpen && (
+                <>
+                    <div className="simple-mobile-menu-overlay" onClick={closeMenu}></div>
+                    <div ref={mobileMenuRef} className="simple-mobile-menu">
+                        <ul className="simple-mobile-nav-list">
+                            {navItems.map((item, index) => (
+                                <li key={index} className="simple-mobile-nav-item">
+                                    <Link to={item.path} className="simple-mobile-nav-link" onClick={closeMenu}>
+                                        {item.name}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </>
+            )}
         </nav>
     );
 }
